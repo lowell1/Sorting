@@ -32,14 +32,19 @@ def merge( arr_a, arr_b ):
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
-"""def merge_sort( arr ):
+def merge_sort( arr ):
     # TO-DO
 
     if len(arr) == 1:
         return arr
 
-    if len(arr) == 2:
-        return arr if arr[0] < arr[1] else [] """
+    middle_ele = int(len(arr) / 2)
+
+    arr1 = merge_sort(arr[0:middle_ele])
+    arr2 = merge_sort(arr[middle_ele:])
+
+    return merge(arr1, arr2)
+
 
 
 # STRETCH: implement an in-place merge sort algorithm
